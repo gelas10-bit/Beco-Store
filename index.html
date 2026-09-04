@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <!-- ==================================================
+         CONFIGURAÇÕES BÁSICAS DO DOCUMENTO
+         ================================================== -->
+
+    <!-- Define a codificação de caracteres da página -->
+    <meta charset="UTF-8">
+
+    <!--
+        Faz o site se adaptar corretamente a diferentes
+        tamanhos de tela, como computador, tablet e celular.
+    -->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+
+    <!-- ==================================================
+         INFORMAÇÕES DA PÁGINA
+         ================================================== -->
+
+    <!-- Nome que aparecerá na aba do navegador -->
+    <title>Nome da Loja</title>
+
+
+    <!-- ==================================================
+         FONTES
+         Fontes utilizadas na identidade visual
+         ================================================== -->
+
+    <!--
+        Conexão antecipada com os servidores do Google Fonts.
+        Isso ajuda no carregamento das fontes.
+    -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+
+    <!--
+        Fontes utilizadas no projeto:
+
+        Bebas Neue:
+        utilizada nos títulos e elementos de destaque.
+
+        Montserrat:
+        utilizada nos textos, menus e informações.
+    -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- ==================================================
+         CSS PRINCIPAL
+         ================================================== -->
+
+    <!--
+        Conecta o HTML ao arquivo CSS.
+
+        Caminho:
+        css/style.css
+    -->
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================================================
+         HEADER
+         Cabeçalho principal da loja
+         ================================================== -->
+
+    <header class="header">
+
+        <!--
+            Container responsável por limitar
+            a largura do conteúdo do header.
+        -->
+        <div class="container header-container">
+
+
+            <!-- ==================================================
+                 LOGO
+                 ================================================== -->
+
+            <a
+                href="#"
+                class="logo"
+            >
+
+                <!--
+                    Logo oficial da marca.
+
+                    Caminho:
+                    assets/logo/logo.png
+
+                    Posteriormente podemos trocar pelo nome
+                    exato do arquivo que você criou no GIMP.
+                -->
+                <img
+                    src="assets/logo/logo.png"
+                    alt="Logo da marca"
+                >
+
+            </a>
+
+
+            <!-- ==================================================
+                 MENU PRINCIPAL
+                 ================================================== -->
+
+            <nav class="main-nav">
+
+                <!-- Link para a página inicial -->
+                <a href="#">
+                    Início
+                </a>
+
+                <!-- Link para a loja -->
+                <a href="#">
+                    Loja
+                </a>
+
+                <!-- Link para as categorias -->
+                <a href="#">
+                    Categorias
+                </a>
+
+                <!-- Link para informações sobre a marca -->
+                <a href="#">
+                    Sobre
+                </a>
+
+                <!-- Link para contato -->
+                <a href="#">
+                    Contato
+                </a>
+
+            </nav>
+
+
+            <!-- ==================================================
+                 AÇÕES DO HEADER
+                 Busca, conta e carrinho
+                 ================================================== -->
+
+            <div class="header-actions">
+
+                <!--
+                    Botão de busca.
+
+                    Futuramente vamos transformar isso
+                    em uma funcionalidade real.
+                -->
+                <button
+                    type="button"
+                    class="header-button"
+                >
+                    Buscar
+                </button>
+
+
+                <!--
+                    Botão da conta do cliente.
+
+                    Futuramente poderá abrir a área
+                    de login/cadastro.
+                -->
+                <button
+                    type="button"
+                    class="header-button"
+                >
+                    Conta
+                </button>
+
+
+                <!--
+                    Botão do carrinho.
+
+                    Futuramente será conectado ao
+                    sistema de carrinho.
+                -->
+                <button
+                    type="button"
+                    class="header-button"
+                >
+                    Carrinho
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==================================================
+         CONTEÚDO PRINCIPAL
+         ================================================== -->
+
+    <main>
+
+
+        <!-- ==================================================
+             HERO / BANNER PRINCIPAL
+             Primeira área visual da loja
+             ================================================== -->
+
+        <section class="hero">
+
+            <!--
+                Container que limita a largura
+                do conteúdo do Hero.
+            -->
+            <div class="container hero-container">
+
+
+                <!-- ==================================================
+                     CONTEÚDO DO HERO
+                     ================================================== -->
+
+                <div class="hero-content">
+
+                    <!--
+                        Pequeno texto de destaque
+                        acima do título principal.
+                    -->
+                    <p class="hero-subtitle">
+                        NOVA COLEÇÃO
+                    </p>
+
+
+                    <!--
+                        Título principal do Hero.
+
+                        A tag <br> força a quebra
+                        de linha entre as frases.
+                    -->
+                    <h1>
+                        Vista sua<br>
+                        identidade.
+                    </h1>
+
+
+                    <!--
+                        Texto complementar do banner.
+                    -->
+                    <p class="hero-description">
+                        Peças feitas para quem não segue padrões.
+                    </p>
+
+
+                    <!--
+                        Botão principal.
+
+                        Futuramente será direcionado
+                        para a página da coleção.
+                    -->
+                    <a
+                        href="#"
+                        class="hero-button"
+                    >
+                        Explorar coleção
+                    </a>
+
+                </div>
+
+
+                <!-- ==================================================
+                     IMAGEM DO HERO
+                     ================================================== -->
+
+                <div class="hero-image">
+
+                    <!--
+                        Imagem principal do banner.
+
+                        Caminho:
+                        assets/img/banners/hero.jpg
+
+                        Esta imagem ainda é provisória.
+                        Depois vamos colocar uma imagem
+                        real da coleção da marca.
+                    -->
+                    <img
+                        src="assets/img/banners/hero.jpg"
+                        alt="Nova coleção da marca"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             SEÇÃO DE PRODUTOS
+             Produtos em destaque da loja
+             ================================================== -->
+
+        <section class="products">
+
+            <!-- Container da seção -->
+            <div class="container">
+
+
+                <!-- ==================================================
+                     CABEÇALHO DA SEÇÃO
+                     ================================================== -->
+
+                <div class="section-header">
+
+                    <!-- Pequeno texto de identificação -->
+                    <p>
+                        DESTAQUES
+                    </p>
+
+                    <!-- Título da seção -->
+                    <h2>
+                        Produtos em destaque
+                    </h2>
+
+                </div>
+
+
+                <!-- ==================================================
+                     GRID DOS PRODUTOS
+                     ================================================== -->
+
+                <div class="product-grid">
+
+
+                    <!-- ==================================================
+                         PRODUTO 01
+                         ================================================== -->
+
+                    <article class="product-card">
+
+                        <!-- Área da imagem -->
+                        <div class="product-image">
+
+                            <!--
+                                Imagem do produto.
+
+                                Caminho:
+                                assets/img/produtos/produto-01.jpg
+                            -->
+                            <img
+                                src="assets/img/produtos/produto-01.jpg"
+                                alt="Camiseta Oversized"
+                            >
+
+                        </div>
+
+
+                        <!-- Informações do produto -->
+                        <div class="product-info">
+
+                            <!-- Categoria -->
+                            <span class="product-category">
+                                CAMISETAS
+                            </span>
+
+                            <!-- Nome do produto -->
+                            <h3>
+                                Camiseta Oversized
+                            </h3>
+
+                            <!-- Preço -->
+                            <p class="product-price">
+                                R$ 149,90
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ==================================================
+                         PRODUTO 02
+                         ================================================== -->
+
+                    <article class="product-card">
+
+                        <!-- Área da imagem -->
+                        <div class="product-image">
+
+                            <img
+                                src="assets/img/produtos/produto-02.jpg"
+                                alt="Camiseta Essential"
+                            >
+
+                        </div>
+
+
+                        <!-- Informações do produto -->
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                CAMISETAS
+                            </span>
+
+                            <h3>
+                                Camiseta Essential
+                            </h3>
+
+                            <p class="product-price">
+                                R$ 159,90
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ==================================================
+                         PRODUTO 03
+                         ================================================== -->
+
+                    <article class="product-card">
+
+                        <!-- Área da imagem -->
+                        <div class="product-image">
+
+                            <img
+                                src="assets/img/produtos/produto-03.jpg"
+                                alt="Moletom Classic"
+                            >
+
+                        </div>
+
+
+                        <!-- Informações do produto -->
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                MOLETONS
+                            </span>
+
+                            <h3>
+                                Moletom Classic
+                            </h3>
+
+                            <p class="product-price">
+                                R$ 179,90
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ==================================================
+                         PRODUTO 04
+                         ================================================== -->
+
+                    <article class="product-card">
+
+                        <!-- Área da imagem -->
+                        <div class="product-image">
+
+                            <img
+                                src="assets/img/produtos/produto-04.jpg"
+                                alt="Calça Street"
+                            >
+
+                        </div>
+
+
+                        <!-- Informações do produto -->
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                CALÇAS
+                            </span>
+
+                            <h3>
+                                Calça Street
+                            </h3>
+
+                            <p class="product-price">
+                                R$ 189,90
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================================================
+         FOOTER
+         Rodapé da página
+         ================================================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <!--
+                Informação de copyright.
+
+                O nome será substituído pelo nome
+                real da marca.
+            -->
+            <p>
+                © 2026 Nome da Loja. Todos os direitos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+         ================================================== -->
+
+    <!--
+        Conecta o HTML ao JavaScript.
+
+        Caminho:
+        js/script.js
+
+        O JavaScript será carregado depois
+        de todo o conteúdo HTML.
+    -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,621 @@
+/* =========================================================
+   RESET
+   Remove margens e espaçamentos padrão do navegador
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   VARIÁVEIS DO PROJETO
+   Aqui definimos cores e fontes para reutilizar no site inteiro
+   ========================================================= */
+
+:root {
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-light-gray: #e5e5e5;
+    --color-gray: #777777;
+    --color-text: #111111;
+
+    --font-title: "Bebas Neue", sans-serif;
+    --font-body: "Montserrat", sans-serif;
+}
+
+
+/* =========================================================
+   CONFIGURAÇÕES GERAIS
+   ========================================================= */
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-white);
+    color: var(--color-text);
+}
+
+
+/* Remove o sublinhado padrão dos links */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* Configuração básica dos botões */
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+
+/* Configuração geral dos títulos */
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-title);
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   CONTAINER
+   Mantém o conteúdo centralizado e limita sua largura
+   ========================================================= */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+    width: 100%;
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+
+.header-container {
+    min-height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+
+/* Logo */
+
+.logo {
+    flex-shrink: 0;
+}
+
+
+.logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+
+/* Menu principal */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+
+.main-nav a {
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    color: var(--color-white);
+
+    transition: opacity 0.3s ease;
+}
+
+
+/* Efeito quando o mouse passa pelo menu */
+
+.main-nav a:hover {
+    opacity: 0.6;
+}
+
+
+/* Botões do lado direito */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.header-button {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    color: var(--color-white);
+
+    cursor: pointer;
+
+    transition: opacity 0.3s ease;
+}
+
+
+.header-button:hover {
+    opacity: 0.6;
+}
+
+
+/* =========================================================
+   HERO / BANNER PRINCIPAL
+   ========================================================= */
+
+.hero {
+    width: 100%;
+    background-color: var(--color-black);
+
+    overflow: hidden;
+}
+
+
+.hero-container {
+    min-height: 650px;
+
+    display: grid;
+
+    /*
+       Divide o espaço em duas colunas:
+       45% para o texto
+       55% para a imagem
+    */
+
+    grid-template-columns: 45% 55%;
+
+    align-items: center;
+}
+
+
+/* Área do texto */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    padding-right: 40px;
+}
+
+
+/* Pequeno texto acima do título */
+
+.hero-subtitle {
+    margin-bottom: 20px;
+
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+
+    color: var(--color-white);
+}
+
+
+/* Título principal */
+
+.hero h1 {
+    font-family: var(--font-title);
+
+    font-size: 96px;
+    line-height: 0.9;
+
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    color: var(--color-white);
+}
+
+
+/* Descrição */
+
+.hero-description {
+    max-width: 420px;
+
+    margin-bottom: 35px;
+
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+
+    color: var(--color-white);
+}
+
+
+/* Botão principal */
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 15px 30px;
+
+    background-color: var(--color-white);
+    color: var(--color-black);
+
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+
+.hero-button:hover {
+    background-color: var(--color-light-gray);
+    color: var(--color-black);
+}
+
+
+/* Área da imagem */
+
+.hero-image {
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+
+/* =========================================================
+   PRODUTOS
+   ========================================================= */
+
+.products {
+    padding: 100px 0;
+}
+
+
+/* Cabeçalho da seção */
+
+.section-header {
+    margin-bottom: 50px;
+}
+
+
+/* Pequeno texto acima do título */
+
+.section-header p {
+    margin-bottom: 10px;
+
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+
+    color: var(--color-gray);
+}
+
+
+/* Título da seção */
+
+.section-header h2 {
+    font-family: var(--font-title);
+
+    font-size: 52px;
+    line-height: 1;
+
+    color: var(--color-black);
+}
+
+
+/* Grade dos produtos */
+
+.product-grid {
+    display: grid;
+
+    /*
+       Cria 4 colunas iguais.
+       O "1fr" significa uma fração do espaço disponível.
+    */
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 24px;
+}
+
+
+/* Card individual */
+
+.product-card {
+    position: relative;
+
+    cursor: pointer;
+}
+
+
+/* Área da foto do produto */
+
+.product-image {
+    width: 100%;
+
+    /*
+       Mantém as imagens em formato vertical.
+    */
+
+    aspect-ratio: 3 / 4;
+
+    overflow: hidden;
+
+    background-color: var(--color-light-gray);
+}
+
+
+/* Imagem do produto */
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+
+/* Zoom da imagem ao passar o mouse */
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+
+/* Informações abaixo da imagem */
+
+.product-info {
+    padding-top: 18px;
+}
+
+
+/* Categoria */
+
+.product-category {
+    display: block;
+
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    color: var(--color-gray);
+
+    margin-bottom: 7px;
+}
+
+
+/* Nome do produto */
+
+.product-info h3 {
+    font-family: var(--font-title);
+
+    font-size: 24px;
+    line-height: 1;
+
+    margin-bottom: 10px;
+
+    color: var(--color-black);
+}
+
+
+/* Preço */
+
+.product-price {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+
+    color: var(--color-black);
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   TABLET / NOTEBOOK MENOR
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    /* Header */
+
+    .header-container {
+        gap: 20px;
+    }
+
+    .main-nav {
+        gap: 18px;
+    }
+
+
+    /* Hero */
+
+    .hero-container {
+        /*
+           No tablet, texto e imagem ficam
+           um embaixo do outro.
+        */
+
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+    }
+
+
+    .hero-content {
+        padding: 80px 0;
+    }
+
+
+    .hero h1 {
+        font-size: 72px;
+    }
+
+
+    .hero-image {
+        height: 500px;
+    }
+
+
+    /* Produtos */
+
+    .product-grid {
+        /*
+           Passamos de 4 para 2 produtos por linha.
+        */
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    /* Header */
+
+    .header-container {
+        min-height: 70px;
+
+        /*
+           Permite que os elementos quebrem
+           para uma nova linha quando necessário.
+        */
+
+        flex-wrap: wrap;
+
+        padding: 15px 0;
+    }
+
+
+    .logo img {
+        width: 120px;
+    }
+
+
+    .main-nav {
+        /*
+           O menu passa para uma nova linha.
+        */
+
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+
+    .main-nav a {
+        font-size: 11px;
+    }
+
+
+    .header-actions {
+        gap: 12px;
+    }
+
+
+    .header-button {
+        font-size: 10px;
+    }
+
+
+    /* Hero */
+
+    .hero-content {
+        padding: 60px 0;
+    }
+
+
+    .hero h1 {
+        font-size: 58px;
+    }
+
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+
+    .hero-image {
+        height: 400px;
+    }
+
+
+    /* Produtos */
+
+    .products {
+        padding: 70px 0;
+    }
+
+
+    .section-header {
+        margin-bottom: 35px;
+    }
+
+
+    .section-header h2 {
+        font-size: 42px;
+    }
+
+
+    .product-grid {
+        /*
+           No celular, um produto por linha.
+        */
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+}
