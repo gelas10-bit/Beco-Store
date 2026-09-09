@@ -173,12 +173,9 @@
                     em uma funcionalidade real.
                 -->
                 <button
-                    type="button"
-                    class="header-button"
-                >
+                    class="header-button" id="search-button">
                     Buscar
                 </button>
-
 
                 <!--
                     Botão da conta do cliente.
@@ -213,6 +210,20 @@
 
     </header>
 
+    <!-- Área de busca que será controlada pelo js script-->
+     <div class="search-box" id="search-box">
+
+        <!-- Campo onde o usuário poderá digitar -->
+         <input
+            type="text"
+            id="search-input"
+            placeholder="Buscar produtos..."
+        >
+
+    <!--Botão para fechar a busca-->
+    <button id="close-search">Fechar</button>
+        
+     </div>
 
     <!-- ==================================================
          CONTEÚDO PRINCIPAL
