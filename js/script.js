@@ -13,6 +13,9 @@ const closeSearch = document.querySelector("#close-search");
 // Seleciona todos os cards de produtos
 const productCards = document.querySelectorAll(".product-card");
 
+// Seleciona a mensagem de "Nenhum produto encontrado"
+const noResultsMessage = document.querySelector("#no-results");
+
 
 // Quando o usuário clicar em "Buscar"
 searchButton.addEventListener("click", function() {
@@ -41,6 +44,9 @@ searchInput.addEventListener("input", function() {
     // Pega o texto digitado e converte para letras minúsculas
     const searchText = searchInput.value.toLowerCase();
 
+    // Conta quantos prdutos foram encontrados
+    let foundProducts = 0;   
+
     // Percorre todos os cards de produtos
     productCards.forEach(function(product) {
 
@@ -52,14 +58,24 @@ searchInput.addEventListener("input", function() {
 
             // Mostra o produto
             product.style.display = "block";
-
+            
+            // Adiciona 1 produto á contagem
+            foundProducts++;
         } else {
 
             // Esconde o produto
             product.style.display = "none";
 
         }
-
     });
+
+    // Se nenhum produto foi encontrado, mostra a mensagem
+    if (foundProducts === 0) {
+        noResultsMessage.style.display = "block";
+        
+    } else {
+        // Esconde a mensagem
+        noResultsMessage.style.display = "none";
+    }       
 
 });
